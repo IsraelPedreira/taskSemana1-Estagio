@@ -1,0 +1,42 @@
+.container{
+    margin-top: 10vh;
+    
+}
+
+.container input{
+    outline: none;
+    border:none;
+    width: 25vw;
+    height: 5vh;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+.container button{
+    background-color: #fff;
+    height: 5vh;
+    width: 10vw;
+    margin:2em;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 0.5em;
+    transition: transform 200ms ;
+    border: none;
+    
+}
+
+.content button:hover{
+    filter: brightness(0.9);
+    transform: scale(1.1)  ;
+}
+
+.contentEdit{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+    color: #fff;
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F56476;
+    width: 50vw;
+    padding: 1em;
+    border-radius: 6px;
+    color:#fff;
+    margin-top: 10vh;
+}
+
+.content{
+    display: inline;
+    margin-top: 1em;
+}
+
+.content input{
+    outline: none;
+    border:none;
+    width: 25vw;
+    height: 5vh;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+.content button {
+
+    background-color: #fff;
+    height: 5vh;
+    margin:none;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 0.5em;
+    transition: transform 200ms ;
+    border: none;
+}
+
+.content button:hover{
+    filter: brightness(0.9);
+    transform: scale(1.1)  ;
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+        width: 90vw;
+    }
+    .container input{
+        width: fit-content;
+    }
+}

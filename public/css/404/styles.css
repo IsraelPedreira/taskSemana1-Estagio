@@ -1,0 +1,23 @@
+.container{
+    color:#FFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    align-items: center;
+}
+
+.container a{
+    color: #FFF;
+    text-decoration: none;
+    background-color: #F56476;
+    margin-top: 3vh;
+    padding: 1em;
+    border-radius: 20px;
+    transition: transform 300ms;
+}
+
+.container a:hover{
+    filter: brightness(0.95);
+    transform: scale(1.1);
+}

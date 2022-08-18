@@ -1,0 +1,11 @@
+
+<link rel="stylesheet" href="/css/editTask/editTask.css">
+<div class="container">
+
+    <h1>Tarefa: {{tasks.tasks}}</h1>
+    <form method="POST" action="/tasks/edit" class="contentEdit" >
+            <input type="hidden" name="id" value="{{tasks.id}}">
+            <input class='inputTask' type="text" name="editTask" value="{{tasks.tasks}}" placeholder="Edite a tarefa " >
+            <button class='botaoAdicionar'>Editar</button>
+    </form>
+</div>
