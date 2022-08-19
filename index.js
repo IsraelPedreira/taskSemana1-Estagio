@@ -17,8 +17,9 @@ app.set('view engine', 'handlebars')
 
 app.get('/tasks/remove/:id',(req,res)=>{
     const id = req.params.id
-    const sql = `DELETE FROM tasks WHERE id=${id}`
-    conn.query(sql,(err,data)=>{
+    const sql = `DELETE FROM ?? WHERE id=?`
+    const data = ['tasks', id]
+    conn.query(sql,data,(err,data)=>{
         if(err){
             console.log(err)
         }
@@ -30,8 +31,9 @@ app.get('/tasks/remove/:id',(req,res)=>{
 
 app.post('/tasks/insert',(req,res)=>{
     const tarefa = req.body.tarefa
-    const sql = `INSERT INTO tasks (tasks) VALUES('${tarefa}')`
-    conn.query(sql,(err)=>{
+    const sql = `INSERT INTO ?? (??) VALUES(?)`
+    const data =['tasks','tasks', tarefa]
+    conn.query(sql,data,(err)=>{
         if(err){
             console.log(err)
             return
@@ -45,8 +47,9 @@ app.post('/tasks/insert',(req,res)=>{
 app.post('/tasks/edit',(req,res)=>{
     const id = req.body.id
     const task = req.body.editTask
-    const sql = `UPDATE tasks SET tasks ='${task}' WHERE id=${id}`
-    conn.query(sql , (err,data)=>{
+    const sql = `UPDATE ?? SET ?? =? WHERE id=?`
+    const data = ['tasks','tasks', task , id]
+    conn.query(sql ,data, (err,data)=>{
         if(err){
             console.log(err)
             return
@@ -58,9 +61,9 @@ app.post('/tasks/edit',(req,res)=>{
 
 app.get('/tasks/edit/:id',(req,res)=>{
     const id = req.params.id
-    
-    const sql = `SELECT * FROM tasks WHERE ID = ${id}`
-    conn.query(sql,(err,data)=>{
+    const sql = `SELECT * FROM ?? WHERE ID = ?`
+    const data = ['tasks', id]
+    conn.query(sql,data,(err,data)=>{
         if(err){
             console.log(err)
             return
