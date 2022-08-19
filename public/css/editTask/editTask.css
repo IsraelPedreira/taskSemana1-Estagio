@@ -6,7 +6,7 @@
 .container input{
     outline: none;
     border:none;
-    width: 25vw;
+    width: 45vw;
     height: 5vh;
     border-radius: 15px;
     padding: 1em;
@@ -15,7 +15,7 @@
 .container button{
     background-color: #fff;
     height: 5vh;
-    width: 10vw;
+    width: 30vw;
     margin:2em;
     border-radius: 15px;
     cursor: pointer;

@@ -1,7 +1,7 @@
 .task{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-top: 1.5em;
     padding: 1em;
     background-color: #A5D0A8;
@@ -39,6 +39,11 @@
     font-size: 0.6em ;
     color: #7A28CB;
    
+}
+
+.task div{
+    display: flex;
+    
 }
 
 
