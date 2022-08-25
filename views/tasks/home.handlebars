@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/css/home/styles.css">
+<main class="container">
+    <h1>Lista de Tarefas</h1>
+    <form method="POST" action="/tasks/insert" class="content">
+        <input class='inputTask' type="text" name="tarefa" placeholder="Digite uma tarefa" >
+        <button class='botaoAdicionar'>Adicionar</button>
+    </form>
+    <ul>
+    {{#each tasks}}
+        {{> task}}
+    {{/each}}
+    </ul>
+    
+</main>
+
+
+
+
+    
