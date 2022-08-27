@@ -11,7 +11,7 @@
    
 }
 
-.task a{
+.task .buttons{
     border:none;
     padding: 0.6em;
     border-radius: 10px;
@@ -21,7 +21,7 @@
     text-decoration: none;
 }
 
-.task a:hover{
+.task .buttons:hover{
     filter: brightness(0.9);
 }
 
@@ -44,6 +44,28 @@
 .task div{
     display: flex;
     
+}
+
+.check{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #0E9594;
+    font-size: 1.7em;
+    margin-left: 1em;
+}
+
+.complete{
+    background-color: #5e7b60;
+    text-decoration: line-through;
+}
+
+@media only screen and (max-width: 600px){
+    .task .buttons{
+        margin-left: 0.7em;
+    }
+
+
 }
 
 

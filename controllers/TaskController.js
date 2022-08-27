@@ -22,7 +22,16 @@ module.exports = class TaskController{
 
     static async postInsert(req,res){
         const tarefa = req.body.tarefa
-        await Task.create({tasks:tarefa})
+        await Task.create({tasks:tarefa,done:0})
+        res.redirect('/')
+    }
+
+    static async done(req,res){
+        const id = req.params.id
+        const task = {
+            done: req.body.done === '0'? true:false
+        }
+        await Task.update(task, {where:{id:id}})
         res.redirect('/')
     }
 

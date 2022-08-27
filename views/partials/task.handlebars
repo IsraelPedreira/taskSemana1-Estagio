@@ -1,11 +1,40 @@
 <link rel="stylesheet" href="/css/task/styles.css">
 
-<li class="task">
-    {{tasks}}
-    <div>
-        <a  href="/tasks/remove/{{id}}" class="buttonDelete">Excluir</a>
+
     
-        <a  href="/tasks/edit/{{id}}" class="buttonEdit" >Editar</a>
-    </div>
+    {{#if done}}  
+        <li class="task complete">
+                {{tasks}}
+                <div>
+                <form method="POST" action="/done/{{id}}">
+                    <button class="check">
+                        <i class="bi bi-check-lg"></i>
+                    </button>
+                    <input type="hidden" name="done" value="{{done}}">
+                </form>
+                <a  href="/tasks/remove/{{id}}" class="buttons buttonDelete">Excluir</a>
+            
+                <a  href="/tasks/edit/{{id}}" class="buttons buttonEdit" >Editar</a>
+            </div>
+        </li>
+
+    {{else}}
+        <li class="task">
+            {{tasks}}
+            <div>
+            <form method="POST" action="/done/{{id}}">
+                <button class="check">
+                    <i class="bi bi-check-lg"></i>
+                </button>
+                <input type="hidden" name="done" value="{{done}}">
+            </form>
+            <a  href="/tasks/remove/{{id}}" class="buttons buttonDelete">Excluir</a>
+        
+            <a  href="/tasks/edit/{{id}}" class="buttons buttonEdit" >Editar</a>
+            </div>
+        </li>
+    {{/if}}
+    
+    
 </li>
 
